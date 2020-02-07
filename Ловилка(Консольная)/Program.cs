@@ -88,11 +88,19 @@ namespace Ловилка_Консольная_
 
             static void Main()
         {
+            //ConsoleKeyInfo key = Console.ReadKey(true);
+
+            //if (key.Key == ConsoleKey.F6)
+            //{
+            //    Environment.Exit(0);
+            //}
             var handle = GetConsoleWindow();
-            ShowWindow(handle, SW_HIDE);
-            Thread.Sleep(2000);
-            do
-            {
+         //   ShowWindow(handle, SW_HIDE);
+            Thread.Sleep(1000);
+          //  int i = 0;
+           
+              do
+               {
                 Thread.Sleep(3000);
                 Point lpPoint;
                 SetCursorPos(962, 542);
@@ -109,15 +117,16 @@ namespace Ловилка_Консольная_
                     System.Diagnostics.Process.Start("https://api.telegram.org/bot1093127317:AAHpR6rK4yNphDZriruKdbIQUCtcyVDZccc/sendMessage?chat_id=-1001220049143&text=Вылезло%20сообщение%20на%20резонансной%20колонке");
                     Environment.Exit(0);
                 }
-                ConsoleKeyInfo key = Console.ReadKey(true);
-
-                if (key.Key == ConsoleKey.F6)
+                else
                 {
-                    Environment.Exit(0);
+                    GC.Collect();
+                    Console.Clear();
                 }
-            } while (true);
-            Console.ReadLine();
+               
+              } while (true);
+           // Console.ReadLine();
             
+        
         }
 
     }
