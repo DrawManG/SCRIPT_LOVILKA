@@ -111,9 +111,8 @@ namespace Ловилка_Консольная_
                 Console.WriteLine("{1}", hWnd, GetWindowText(hWnd));
                 string cc = GetWindowText(hWnd);
                 SetCursorPos(962, 542);
-                if (cc == "РК статика")
+                if (cc == "РК статика" && cc == "RCCT")
                 {
-
                     System.Diagnostics.Process.Start("https://api.telegram.org/bot1093127317:AAHpR6rK4yNphDZriruKdbIQUCtcyVDZccc/sendMessage?chat_id=-1001220049143&text=Вылезло%20сообщение%20на%20резонансной%20колонке");
                     Environment.Exit(0);
                 }
@@ -122,7 +121,6 @@ namespace Ловилка_Консольная_
                     GC.Collect();
                     Console.Clear();
                 }
-               
               } while (true);
            // Console.ReadLine();
             
